@@ -3,6 +3,7 @@ extends RigidBody2D
 onready var Game = get_node("/root/Game")
 onready var Starting = get_node("/root/Game/Starting")
 
+
 func _ready():
 	contact_monitor = true
 	set_max_contacts_reported(4)
