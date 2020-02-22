@@ -1,5 +1,15 @@
 # 06-Juicy-Breakout
 
+This is the project for week 6 for C220 at Indiana University by Samantha Galati
+
+THINGS THAT I ADDED:
+1. Added Background to main, game over, and you win scene
+2. Changed color of ball 
+3. Added eyes to paddle
+4. Added smile to paddle
+5. Changed color of tiles 
+6. Added particles to the ball
+
 This is an opportunity for you to implement some of the "juicy" features as demonstrated in the 2012 GDC presentation, "Juice it or Lose it."
 
 I have provided a simple, generic brick breaker game, built in Godot. You can use the presentation as a guide or use your own imagination, but your assignment is to make the game feel more "juicy": kinetic, reactive, physical.
