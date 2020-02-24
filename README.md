@@ -9,6 +9,14 @@ THINGS THAT I ADDED:
 4. Added smile to paddle
 5. Changed color of tiles 
 6. Added particles to the ball
+7. Added sound effect to block exploding
+8. Added Background music
+9. Added particles to tiles ****
+10. Added Sound effect to paddle ***
+11. Added Sound effect when you lose a life
+12. Changed Font of score and health
+13. Changed font of starting count down
+14. Changed font of game over text in game over scene
 
 This is an opportunity for you to implement some of the "juicy" features as demonstrated in the 2012 GDC presentation, "Juice it or Lose it."
 
