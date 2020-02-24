@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Glows/Flare4.png" type="Texture" id=2]
+[ext_resource path="res://Assets/laser1.wav" type="AudioStream" id=4]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -9,15 +10,18 @@ bounce = 1.0
 
 [sub_resource type="Theme" id=2]
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=3]
 trail_divisor = 4
+emission_shape = 1
+emission_sphere_radius = 50.0
 flag_disable_z = true
-gravity = Vector3( 0, 98, 0 )
-orbit_velocity = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 167.25
+orbit_velocity = 4.0
 orbit_velocity_random = 0.0
 color = Color( 0.976471, 0.894118, 1, 1 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8, 8 )
 
 [node name="Ball" type="RigidBody2D"]
@@ -47,13 +51,16 @@ __meta__ = {
 }
 
 [node name="Particles2D" type="Particles2D" parent="ColorRect"]
-visible = false
 position = Vector2( 8, 8 )
 scale = Vector2( 0.3, 0.2 )
+amount = 10
 lifetime = 2.0
-process_material = SubResource( 4 )
+process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="Explodingsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Paddle.gd" type="Script" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://Scripts/Starting.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Background.jpg" type="Texture" id=7]
 [ext_resource path="res://Assets/SmileyFace.png" type="Texture" id=8]
-[ext_resource path="res://Scripts/Camera.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/(Background Music)dj soul - Summer Adventure.ogg" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 72, 16 )
@@ -20,10 +21,7 @@ script = ExtResource( 1 )
 position = Vector2( 520, 287 )
 texture = ExtResource( 7 )
 
-[node name="Camera" type="Camera2D" parent="."]
-anchor_mode = 0
-current = true
-script = ExtResource( 9 )
+[node name="Camera" parent="." instance=ExtResource( 9 )]
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
 position = Vector2( 544, 552 )
@@ -243,4 +241,7 @@ script = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="Starting"]
 wait_time = 10.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 [connection signal="timeout" from="Starting/Timer" to="Starting" method="_on_Timer_timeout"]

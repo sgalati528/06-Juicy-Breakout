@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/(Background Music)dj soul - Summer Adventure.ogg-2a379a154f54619a7250f2ad6cbed498.oggstr"
+
+[deps]
+
+source_file="res://Assets/(Background Music)dj soul - Summer Adventure.ogg"
+dest_files=[ "res://.import/(Background Music)dj soul - Summer Adventure.ogg-2a379a154f54619a7250f2ad6cbed498.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

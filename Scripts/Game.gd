@@ -6,9 +6,9 @@ var max_score = 0
 
 var new_ball = preload("res://Scenes/Ball.tscn")
 
-onready var Camera = $Camera
 
 func _ready():
+	$BackgroundMusic.playing = true
 	randomize()
 	$Score.update_score(score)
 	$Lives.update_lives(lives)
@@ -41,12 +41,5 @@ func make_new_ball(pos):
 		vector = vector.rotated(rand_range(-PI/3,-PI/6))
 	ball.linear_velocity = vector
 	add_child(ball)
-
-func _physics_process(delta):
-	if Input.is_action_pressed("Right"):
-		$Camera.add_trauma(1)
-		print ("did it")
-	if Input.is_action_pressed("Up"):
-		$Camera.add_trauma(0.5)
-	if Input.is_action_pressed("Down"):
-		$Camera.add_trauma(0.3)
+	
+	

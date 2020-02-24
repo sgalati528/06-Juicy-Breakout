@@ -14,6 +14,7 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.is_in_group("Tiles"):
 			Game.change_score(body.points)
+			$Explodingsound.playing = true
 			body.queue_free()
 	
 	if position.y > get_viewport().size.y:
