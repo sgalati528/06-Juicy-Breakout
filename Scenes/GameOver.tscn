@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Background.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Days.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,8 +28,12 @@ __meta__ = {
 margin_top = 200.0
 margin_right = 1024.0
 margin_bottom = 256.0
+custom_fonts/font = SubResource( 1 )
 text = "Game Over"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button" type="Button" parent="."]
 margin_left = 416.0

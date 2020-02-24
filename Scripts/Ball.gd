@@ -16,6 +16,8 @@ func _physics_process(delta):
 			Game.change_score(body.points)
 			$Explodingsound.playing = true
 			body.queue_free()
+		if body.is_in_group("Game"):
+			$PaddleHit.playing = true 
 	
 	if position.y > get_viewport().size.y:
 		Game.change_lives(-1)

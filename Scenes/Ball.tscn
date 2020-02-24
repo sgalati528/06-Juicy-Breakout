@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Glows/Flare4.png" type="Texture" id=2]
+[ext_resource path="res://Assets/PaddleHit.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Assets/laser1.wav" type="AudioStream" id=4]
 
 [sub_resource type="PhysicsMaterial" id=1]
@@ -53,14 +54,17 @@ __meta__ = {
 [node name="Particles2D" type="Particles2D" parent="ColorRect"]
 position = Vector2( 8, 8 )
 scale = Vector2( 0.3, 0.2 )
-amount = 10
+amount = 12
 lifetime = 2.0
 process_material = SubResource( 3 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 4 )
 
 [node name="Explodingsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="PaddleHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = 24.0

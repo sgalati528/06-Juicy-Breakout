@@ -9,3 +9,4 @@ func _physics_process(delta):
 	if target > view.x - shape.x / 2:
 		target = view.x - shape.x / 2
 	position = Vector2(target, position.y)
+

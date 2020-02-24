@@ -23,10 +23,12 @@ func change_score(s):
 		get_tree().change_scene("res://Scenes/Win.tscn")
 
 func change_lives(l):
+	$LoseLife.playing = true
 	lives += l
 	$Lives.update_lives(lives)
 	#if there are no more lives show the game over screen
 	if lives <= 0:
+		$LoseLife.playing = true
 		get_tree().change_scene("res://Scenes/GameOver.tscn")
 
 func make_new_ball(pos):

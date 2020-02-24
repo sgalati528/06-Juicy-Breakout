@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PaddleHit.ogg-6c5c75c9d6e129fb63fa8c266365328c.oggstr"
+
+[deps]
+
+source_file="res://Assets/PaddleHit.ogg"
+dest_files=[ "res://.import/PaddleHit.ogg-6c5c75c9d6e129fb63fa8c266365328c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
