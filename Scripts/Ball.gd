@@ -2,7 +2,7 @@ extends RigidBody2D
 
 onready var Game = get_node("/root/Game")
 onready var Starting = get_node("/root/Game/Starting")
-
+onready var camera = get_node("/root/Game/Camera") 
 
 func _ready():
 	contact_monitor = true
@@ -16,8 +16,11 @@ func _physics_process(delta):
 			Game.change_score(body.points)
 			$Explodingsound.playing = true
 			body.queue_free()
-		if body.is_in_group("Game"):
+			camera.add_trauma(0.3)
+		if body.name == "Paddle":
 			$PaddleHit.playing = true 
+		if body.name == "Wall":
+			camera.add_trauma(0.2)
 	
 	if position.y > get_viewport().size.y:
 		Game.change_lives(-1)
